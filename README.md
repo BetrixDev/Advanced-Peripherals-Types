@@ -1,5 +1,5 @@
 <div align="center"><img alt="Package Logo" src="./logo.png" width="128"/></div>
-<div align="center"><h1>Advanced Peripherals Types (Incomplete)</h1></div>
+<div align="center"><h1>Advanced Peripherals Types (80% Complete)</h1></div>
 <br>
 
 This package adds full typed coverage of the [Advanced Peripherals API](https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals) used to increase the functionality of [Computer Craft](https://www.curseforge.com/minecraft/mc-mods/cc-tweaked) Computers.
