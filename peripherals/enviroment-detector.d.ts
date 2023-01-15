@@ -30,7 +30,7 @@ export interface EnviromentDetector {
   getTime(): number;
 
   /** Returns the radiation of mekanism with the current unit */
-  getRadiation(): ?MekinismRadiation;
+  getRadiation(): MekinismRadiation | null;
 
   /** Returns the raw radiation in Sv/h */
   getRadiationRaw(): number;
