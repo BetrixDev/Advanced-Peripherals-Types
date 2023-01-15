@@ -10,25 +10,13 @@ export interface ARController {
   drawCenteredString(text: string, x: number, y: number, color: number): void;
 
   /** The same as `drawCenteredString()`, but has an id so it can be overridden later on or can be completely cleared */
-  drawCenteredStringWithId(
-    id: string,
-    text: string,
-    x: number,
-    y: number,
-    color: number
-  ): void;
+  drawCenteredStringWithId(id: string, text: string, x: number, y: number, color: number): void;
 
   /** Draws a circle without filling it */
   drawCircle(x: number, y: number, radius: number, color: number): void;
 
   /** The same as `drawCircle()`, but has an id so it can be overridden later on or can be completely cleared */
-  drawCircleWithId(
-    id: string,
-    x: number,
-    y: number,
-    radius: number,
-    color: number
-  ): void;
+  drawCircleWithId(id: string, x: number, y: number, radius: number, color: number): void;
 
   /** Draws the given item to the specified position */
   drawItemIcon(itemId: string, x: number, y: number): void;
@@ -40,34 +28,16 @@ export interface ARController {
   drawRightboundString(text: string, x: number, y: number, color: number): void;
 
   /** The same as `drawRightboundString()`, but has an id so it can be overridden later on or can be completely cleared */
-  drawRightboundStringWithId(
-    id: string,
-    text: string,
-    x: number,
-    y: number,
-    color: number
-  ): void;
+  drawRightboundStringWithId(id: string, text: string, x: number, y: number, color: number): void;
 
   /** Draws the given string to the specified position and the specified color */
   drawString(text: string, x: number, y: number, color: number): void;
 
   /** The same as `drawString()`, but has an id so it can be overridden later on or can be completely cleared */
-  drawStringWithId(
-    id: string,
-    text: string,
-    x: number,
-    y: number,
-    color: number
-  ): void;
+  drawStringWithId(id: string, text: string, x: number, y: number, color: number): void;
 
   /** Fills a rectangle with the given color from the corner minX, minY to maxX, maxY */
-  fill(
-    minX: number,
-    minY: number,
-    maxX: number,
-    maxY: number,
-    color: number
-  ): void;
+  fill(minX: number, minY: number, maxX: number, maxY: number, color: number): void;
 
   /** The same as `fill()`, but has an id so it can be overridden later on or can be completely cleared */
   fillWithId(
@@ -83,13 +53,7 @@ export interface ARController {
   fillCircle(x: number, y: number, radius: number, color: number): void;
 
   /** The same as `fillCircle()`, but has an id so it can be overridden later on or can be completely cleared */
-  fillCircleWithId(
-    id: srting,
-    x: number,
-    y: number,
-    radius: number,
-    color: number
-  ): void;
+  fillCircleWithId(id: string, x: number, y: number, radius: number, color: number): void;
 
   /** Draws a rectangular gradient from colorFrom to colorTo with the given corners */
   fillGradient(
@@ -116,32 +80,17 @@ export interface ARController {
   horizontalLine(minX: number, maxX: number, y: number, color: number): void;
 
   /** The same as `horizontalLine()`, but has an id so it can be overridden later on or can be completely cleared */
-  horizontalLineWithId(
-    id: string,
-    minX: number,
-    maxX: number,
-    y: number,
-    color: number
-  ): void;
+  horizontalLineWithId(id: string, minX: number, maxX: number, y: number, color: number): void;
 
   /** Draws a vertical line in the given color from minY to maxY at horizontal x */
   verticalLine(x: number, minY: number, maxY: number, color: number): void;
 
   /** The same as `verticalLine()`, but has an id so it can be overridden later on or can be completely cleared */
-  verticalLineWithId(
-    id: number,
-    x: number,
-    minY: number,
-    maxY: number,
-    color: number
-  ): void;
+  verticalLineWithId(id: number, x: number, minY: number, maxY: number, color: number): void;
 
   /** Returns true and the size of the virtual screen if relative mode is active, or just false if it isn't */
   isRelativeMode(): [true, number, number] | [false];
 
   /** Activates or deactivates relative mode. Requires virtual screen width and height if it's being enabled. */
-  setRelativeMode(
-    enabled: boolean,
-    virtualScreenSize: [width: number, height: number]
-  );
+  setRelativeMode(enabled: boolean, virtualScreenSize: [width: number, height: number]);
 }

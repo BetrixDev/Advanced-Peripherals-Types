@@ -29,13 +29,13 @@ export interface PlayerDetector {
   isPlayerInCubic(x: number, y: number, z: number, username: string): boolean;
 
   /** Similar to `getPlayersInRange`, but doesn't return specific players in the range */
-  isPlayersInRange(range: numer): boolean;
+  isPlayerInRange(range: number): boolean;
 
   /** Similar to `getPlayersInCoords`, but doesn't return specific players in the coords */
-  isPlayersInCoords(pos1: Coordinate, pos2: Coordinate): boolean;
+  isPlayerInCoords(pos1: Coordinate, pos2: Coordinate): boolean;
 
   /** Similar to `getPlayersInCubic`, but doesn't return specific players in the cubic */
-  isPlayersInCubic(x: number, y: number, z: number): boolean;
+  isPlayerInCubic(x: number, y: number, z: number): boolean;
 }
 
 export interface Coordinate {

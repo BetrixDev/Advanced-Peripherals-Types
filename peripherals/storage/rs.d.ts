@@ -8,7 +8,7 @@ import { Item, StorageBridge, StorageItemStack } from "./common";
  */
 export interface RSBridge extends StorageBridge {
   /** Returns the crafting pattern of this item. */
-  getPattern(item: Item): ?RSCraftingPattern;
+  getPattern(item: Item): RSCraftingPattern | null;
 
   /** Returns the total amount of availabe item disk storage */
   getMaxItemDiskStorage(): number;
@@ -25,7 +25,6 @@ export interface RSBridge extends StorageBridge {
 
 export type RSCraftingPattern = {
   processing: boolean;
-  outputs: StorageItemStack[];
   inputs: StorageItemStack[];
   outputs: StorageItemStack[];
   byproducts: StorageItemStack[];
