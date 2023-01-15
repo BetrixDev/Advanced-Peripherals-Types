@@ -1,0 +1,33 @@
+{
+  "name": "advanced-peripheral-types",
+  "author": "Betrix",
+  "license": "MIT",
+  "description": "Adds Typescript typings to the Advanced Peripherals Minecraft mod",
+  "version": "0.1.0",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "publish": "pnpm publish"
+  },
+  "keywords": [
+    "advanced",
+    "peripherals",
+    "computer",
+    "craft",
+    "types",
+    "cc tweaked"
+  ],
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4",
+    "typescript-to-lua": "^1.11.1"
+  },
+  "files": [
+    "./index.d.ts",
+    "./peripherals/storage/*.ts",
+    "./peripherals/index.d.ts",
+    "./peripherals/**/*.ts",
+    "./peripherals/*.ts"
+  ]
+}
