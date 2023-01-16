@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface BlockReader {
   /** Returns the registry name of the block *(e.g. minecraft:dirt)* */
   getBlockName(): string;

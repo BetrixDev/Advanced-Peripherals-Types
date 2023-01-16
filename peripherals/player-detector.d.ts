@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface PlayerDetector {
   /**
    * Returns player's position

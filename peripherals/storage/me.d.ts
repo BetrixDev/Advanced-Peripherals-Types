@@ -6,6 +6,7 @@ import { Item, StorageBridge } from "./common";
  *  ```ts
  *  peripheral.find("meBridge")
  * ```
+ * @noSelf
  * */
 export interface MEBridge extends StorageBridge {
   /**

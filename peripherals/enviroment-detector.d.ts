@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface EnviromentDetector {
   /** Returns the biome the block is in */
   getBiome(): string;

@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface InventoryManager {
   /** Adds an item to the player's inventory. `direction` is the direction for the chest/inventory block. The Inventory Manager will add a random item to the player's inventory if the argument `item` is null */
   addItemToPlayer(invDirection: string, count: number, slot?: number, item?: string): number;

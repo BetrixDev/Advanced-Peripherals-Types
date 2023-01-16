@@ -5,6 +5,7 @@ import { Item, StorageBridge, StorageItemStack } from "./common";
  * ```ts
  *  peripheral.find("rsBridge")
  * ```
+ * @noSelf
  */
 export interface RSBridge extends StorageBridge {
   /** Returns the crafting pattern of this item. */

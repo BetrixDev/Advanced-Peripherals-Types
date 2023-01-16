@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface StorageBridge {
   /**
    * Queues the specified item for crafting

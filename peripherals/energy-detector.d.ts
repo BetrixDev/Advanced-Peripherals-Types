@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface EnergyDetector {
   /** Returns the current energy which go through the block */
   getTransferRate(): number;

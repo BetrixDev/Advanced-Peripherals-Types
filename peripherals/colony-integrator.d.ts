@@ -1,5 +1,6 @@
 import { Coordinate } from "./player-detector";
 
+/** @noSelf **/
 export interface ColonyIntegrator {
   /** Returns true if the block is in a colony */
   isInColony(): boolean;

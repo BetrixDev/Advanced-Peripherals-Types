@@ -1,6 +1,13 @@
+/** @noSelf **/
 export interface ChatBox {
-  sendFormattedMessage(message: string): true | [null, string];
-  sendMessage(message: string): true | [null, string];
-  sendFormattedMessageToPlayer(message: string, playerName: string): true | [null, string];
-  sendMessageToPlayer(message: string, playerName: string): true | [null, string];
+  sendFormattedMessage(message: string): LuaMultiReturn<[true, null] | [false, string]>;
+  sendMessage(message: string): true | LuaMultiReturn<[true, null] | [false, string]>;
+  sendFormattedMessageToPlayer(
+    message: string,
+    playerName: string
+  ): LuaMultiReturn<[true, null] | [false, string]>;
+  sendMessageToPlayer(
+    message: string,
+    playerName: string
+  ): LuaMultiReturn<[true, null] | [false, string]>;
 }

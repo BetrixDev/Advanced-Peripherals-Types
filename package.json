@@ -3,7 +3,7 @@
   "author": "Betrix",
   "license": "MIT",
   "description": "Adds Typescript typings to the Advanced Peripherals Minecraft mod",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "index.d.ts",
   "types": "index.d.ts",
   "scripts": {
@@ -29,5 +29,8 @@
     "./peripherals/index.d.ts",
     "./peripherals/**/*.ts",
     "./peripherals/*.ts"
-  ]
+  ],
+  "dependencies": {
+    "@typescript-to-lua/language-extensions": "^1.0.0"
+  }
 }

@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface GeoScanner {
   /** Returns stored fuel */
   getFuelLevel(): number;

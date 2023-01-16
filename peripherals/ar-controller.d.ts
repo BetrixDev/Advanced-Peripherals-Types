@@ -1,4 +1,7 @@
-/** Removed in 1.19+ */
+/**
+ * Removed in 1.19+
+ * @noSelf
+ */
 export interface ARController {
   /** Clears the entire canvas */
   clear(): void;

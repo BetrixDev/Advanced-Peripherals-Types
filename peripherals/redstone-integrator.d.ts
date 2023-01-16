@@ -1,3 +1,4 @@
+/** @noSelf **/
 export interface RedstoneIntegrator {
   /** Returns `true` if the redstone at the given side is on; `false` if not */
   getInput(direction: string): boolean;
