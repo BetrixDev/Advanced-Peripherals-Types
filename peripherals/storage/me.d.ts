@@ -17,7 +17,7 @@ export interface MEBridge extends StorageBridge {
   craftItem(item: Item): true;
 
   /** Returns all connected crafting cpus */
-  getCraftingCPUs(): MECPU[];
+  getCraftingCPUs(): LuaMultiReturn<[MECPU[], undefined]> | LuaMultiReturn<[undefined, string]>;
 }
 
 /** Represents an ME Crafting CPU */

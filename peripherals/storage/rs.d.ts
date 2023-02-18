@@ -8,8 +8,13 @@ import { Item, StorageBridge, StorageItemStack } from "./common";
  * @noSelf
  */
 export interface RSBridge extends StorageBridge {
+  /** Tries to craft the provided `fluid` of the given `amount`, returns true if it successfully starts crafting. */
+  craftItem(fluid: string, amount: number): boolean;
+
   /** Returns the crafting pattern of this item. */
-  getPattern(item: Item): RSCraftingPattern | null;
+  getPattern(
+    item: Item
+  ): LuaMultiReturn<[RSCraftingPattern, undefined]> | LuaMultiReturn<[undefined, string]>;
 
   /** Returns the total amount of availabe item disk storage */
   getMaxItemDiskStorage(): number;

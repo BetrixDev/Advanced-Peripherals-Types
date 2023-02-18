@@ -5,7 +5,7 @@ export interface StorageBridge {
    * @param item Information about the item to craft
    * @returns A boolean indicating whether it was started *(not if it finished)*
    */
-  craftItem(item: Item): boolean;
+  craftItem(item: CraftableItem): boolean;
 
   /**
    * Exports the selected item to an inventory in the specfied direction
@@ -22,16 +22,16 @@ export interface StorageBridge {
   exportItemToPeripheral(item: Item, peripheral: string): number;
 
   /** Returns the stored energy of the whole system. */
-  getEnergyStorage(): number;
+  getEnergyStorage(): LuaMultiReturn<[number, undefined]> | LuaMultiReturn<[undefined, string]>;
 
   /** Returns the energy usage of the whole system */
-  getEnergyUsage(): number;
+  getEnergyUsage(): LuaMultiReturn<[number, undefined]> | LuaMultiReturn<[undefined, string]>;
 
   /** Returns a table with information of the item. */
   getItem(item: Item): StorageItemStack;
 
   /** Returns the maximum energy storage of the whole system. */
-  getMaxEnergyStorage(): number;
+  getMaxEnergyStorage(): LuaMultiReturn<[number, undefined]> | LuaMultiReturn<[undefined, string]>;
 
   /**
    * Imports an item to the ME System from the chest in the direction of the block
@@ -53,6 +53,9 @@ export interface StorageBridge {
   /** Returns true if the item is craftble */
   isItemCraftable(item: Item): boolean;
 
+  /** Returns a list of information about all craftable items */
+  listCraftableItems(): Item[];
+
   /** Returns a list of all craftable fluids in the system */
   listCraftableFluids(): FluidStack[];
 
@@ -63,14 +66,18 @@ export interface StorageBridge {
   listItems(): StorageItemStack[];
 }
 
+export type CraftableItem = Omit<Item, "count"> & {
+  count?: number;
+};
+
 /** Represents an item inside of an AE2 or RS storage system */
 export type Item = {
   name: string;
-  count: number;
   fingerprint?: string;
+  amount: number;
+  displayName: string;
+  isCraftable: boolean;
   nbt?: string;
-  json?: string;
-  tag?: string;
 };
 
 export type StorageItemStack = Omit<Item, "count"> & {
